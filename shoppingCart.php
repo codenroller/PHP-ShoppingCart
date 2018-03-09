@@ -9,7 +9,6 @@ class Product {
     }
 }
 
-
 class ShoppingCart {
     private $cart;
     
@@ -55,7 +54,7 @@ class ShoppingCart {
         return $val;
     }
     
-    public function display_cart() {
+    public function display_cart() {//this function is for testing purposes
         print("<br/>Currently in my cart: <br/>");
         
         forEach($this->cart as $name=>$item) {
