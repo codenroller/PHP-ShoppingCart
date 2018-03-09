@@ -22,8 +22,7 @@ class ShoppingCart {
         if( !array_key_exists($name, $this->cart) ) {
             $this->cart[$name]['product'] = $product;
             $this->cart[$name]['quantity'] = 0;
-        }
-        
+        }        
         $this->cart[$name]['quantity'] += 1;
     }
     
@@ -37,11 +36,10 @@ class ShoppingCart {
         if ($this->cart[$name]['quantity'] > 0) {
             $this->cart[$name]['quantity'] -= 1;
         }
-        //if there is no items lef drop product from array
+        //if there is no items left drop product from array
         if ($this->cart[$name]['quantity'] === 0) {
            unset($this->cart[$name]);
-        }
-     
+        }     
         return true;
     }
     
@@ -49,8 +47,7 @@ class ShoppingCart {
         $val = 0;
         forEach($this->cart as $name=>$item) {
             $val += $item['quantity'] * $item['product']->price;
-        }
-        
+        }        
         return $val;
     }
     
