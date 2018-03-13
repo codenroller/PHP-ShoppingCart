@@ -10,7 +10,7 @@ class Product {
 }
 
 class ShoppingCart {
-    private $cart;
+    protected $cart;
     
     public function __construct() {
         $this -> cart = [];
